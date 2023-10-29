@@ -140,7 +140,7 @@ const AppProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const authFetch = axios.create({
-    baseURL: '/api/v1',
+    baseURL: 'https://safesrilankaai-api.onrender.com/api/v1',
   });
 
   //request
@@ -198,7 +198,7 @@ const AppProvider = ({ children }) => {
   const registerUser = async (currentUser) => {
     dispatch({ type: REGISTER_USER_BEGIN });
     try {
-      const response = await axios.post('/api/v1/auth/register', currentUser);
+      const response = await axios.post('https://safesrilankaai-api.onrender.com/api/v1/auth/register', currentUser);
       const { user, token } = response.data;
       dispatch({
         type: REGISTER_USER_SUCCESS,
@@ -220,7 +220,7 @@ const AppProvider = ({ children }) => {
   const loginUser = async (currentUser) => {
     dispatch({ type: LOGIN_USER_BEGIN });
     try {
-      const response = await axios.post('/api/v1/auth/login', currentUser);
+      const response = await axios.post('https://safesrilankaai-api.onrender.com/api/v1/auth/login', currentUser);
 
       const { user, token } = response.data;
       dispatch({
@@ -241,7 +241,7 @@ const AppProvider = ({ children }) => {
   const setupUser = async ({ currentUser, endPoint, alertText }) => {
     dispatch({ type: SETUP_USER_BEGIN });
     try {
-      const response = await axios.post(`/api/v1/auth/${endPoint}`, currentUser);
+      const response = await axios.post(`https://safesrilankaai-api.onrender.com/api/v1/auth/${endPoint}`, currentUser);
 
       const { user, token } = response.data;
       dispatch({
@@ -275,7 +275,7 @@ const AppProvider = ({ children }) => {
   const loginUserPasswordRest = async (email) => {
     dispatch({ type: LOGIN_PASSWORDREST });
     try {
-      const response = await axios.post('/api/v1/auth/login/frogetpassword', {
+      const response = await axios.post('https://safesrilankaai-api.onrender.com/api/v1/auth/login/frogetpassword', {
         email,
       });
       dispatch({
@@ -295,7 +295,7 @@ const AppProvider = ({ children }) => {
     dispatch({ type: LOGIN_NEWPASSWORD });
     const newPassword = password;
     try {
-      const response = await axios.post(`/api/v1/auth/login/newpassword/${id}/${token}`, { newPassword });
+      const response = await axios.post(`https://safesrilankaai-api.onrender.com/api/v1/auth/login/newpassword/${id}/${token}`, { newPassword });
       dispatch({
         type: LOGIN_NEWPASSWORD_COMPLETE,
         payload: { msg: response.data.msg },
@@ -312,7 +312,7 @@ const AppProvider = ({ children }) => {
   const updateUser = async (currentUser) => {
     dispatch({ type: UPDATE_USER_BEGIN });
     try {
-      const { data } = await authFetch.patch('/auth/updateUser', currentUser);
+      const { data } = await authFetch.patch('https://safesrilankaai-api.onrender.com/auth/updateUser', currentUser);
 
       const { user, token } = data;
 

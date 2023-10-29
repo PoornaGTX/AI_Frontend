@@ -313,7 +313,7 @@ const AppProvider = ({ children }) => {
   const updateUser = async (currentUser) => {
     dispatch({ type: UPDATE_USER_BEGIN });
     try {
-      const { data } = await authFetch.patch('https://safesrilankaai-api.onrender.com/auth/updateUser', currentUser);
+      const { data } = await authFetch.patch('https://safesrilankaai-api.onrender.com/api/v1/auth/updateUser', currentUser);
 
       const { user, token } = data;
 

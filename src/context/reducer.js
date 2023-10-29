@@ -60,6 +60,7 @@ import {
   GETEDU_ERROR,
   CHANGE_VLAUES_EDU,
   CLEAR_VALUES_REASON,
+  DELETEPDF_BEGIN,
 } from './action';
 
 import { initialState } from './appContext';

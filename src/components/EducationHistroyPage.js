@@ -1,44 +1,39 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useAppContext } from "../context/appContext";
-import Wrapper from "../assets/wrappers/Job";
-import AdminUserInfo from "./AdminUserInfo";
-import { MdEmail, MdSchool } from "react-icons/md";
-import { IoPerson } from "react-icons/io5";
-import { AiTwotoneEnvironment } from "react-icons/ai";
-import { generatallPDF } from "../utils/PDF_Education";
-import { ImClock, ImUser, ImStatsDots } from "react-icons/im";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAppContext } from '../context/appContext';
+import Wrapper from '../assets/wrappers/Job';
+import AdminUserInfo from './AdminUserInfo';
+import { MdEmail, MdSchool } from 'react-icons/md';
+import { IoPerson } from 'react-icons/io5';
+import { AiTwotoneEnvironment } from 'react-icons/ai';
+import { generatallPDF } from '../utils/PDF_Education';
+import { ImClock, ImUser, ImStatsDots } from 'react-icons/im';
 
-const EducationHistroyPage = ({
-  _id,
-  year,
-  age,
-  educationAllDeathCount,
-  type,
-  education,
-  createdAt,
-  GenratedDate,
-}) => {
-  const { setDeleteUser, setUpdateUser, user } = useAppContext();
+const EducationHistroyPage = ({ _id, year, age, educationAllDeathCount, type, education, createdAt, GenratedDate }) => {
+  const { setDeleteUser, setUpdateUser, user, deletePDFEdu } = useAppContext();
 
   const ageGroupValueMap = {
-    1: "0-8",
-    2: "8-16",
-    3: "17-20",
-    4: "21-25",
-    5: "26-30",
-    6: "31-35",
-    7: "36-40",
-    8: "41-45",
-    9: "46-50",
-    10: "51-55",
-    11: "56-60",
-    12: "61-65",
-    13: "66-70",
-    14: "71-100",
+    1: '0-8',
+    2: '8-16',
+    3: '17-20',
+    4: '21-25',
+    5: '26-30',
+    6: '31-35',
+    7: '36-40',
+    8: '41-45',
+    9: '46-50',
+    10: '51-55',
+    11: '56-60',
+    12: '61-65',
+    13: '66-70',
+    14: '71-100',
   };
 
   const agevalue = ageGroupValueMap[age];
+
+  const deletePDF = (id) => {
+    deletePDFEdu(id);
+  };
 
   return (
     <Wrapper>
@@ -53,19 +48,9 @@ const EducationHistroyPage = ({
       <div className="content">
         <div className="content-center">
           <AdminUserInfo icon={<ImClock />} text={`Date : ${GenratedDate}`} />
-          <AdminUserInfo
-            icon={<ImStatsDots />}
-            text={`Predicted Year ${year}`}
-          />
+          <AdminUserInfo icon={<ImStatsDots />} text={`Predicted Year ${year}`} />
           <AdminUserInfo icon={<ImUser />} text={`Age Group : ${agevalue}`} />
-          <AdminUserInfo
-            icon={<MdSchool />}
-            text={
-              type === "Education"
-                ? `Education : ${education}`
-                : `Occupation : ${education}`
-            }
-          />
+          <AdminUserInfo icon={<MdSchool />} text={type === 'Education' ? `Education : ${education}` : `Occupation : ${education}`} />
         </div>
 
         <footer>
@@ -83,10 +68,7 @@ const EducationHistroyPage = ({
             >
               Download PDF
             </button>
-            <button
-              className="btn delete-btn"
-              onClick={() => setDeleteUser(_id)}
-            >
+            <button className="btn delete-btn" onClick={() => deletePDF(_id)}>
               Delete From History
             </button>
           </div>

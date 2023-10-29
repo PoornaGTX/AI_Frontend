@@ -60,17 +60,17 @@ import {
   GETEDU_ERROR,
   CHANGE_VLAUES_EDU,
   CLEAR_VALUES_REASON,
-} from "./action";
+} from './action';
 
-import { initialState } from "./appContext";
+import { initialState } from './appContext';
 
 const reducer = (state, action) => {
   if (action.type === DISPLAY_ALERT) {
     return {
       ...state,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Please provide all values",
+      alertType: 'danger',
+      alertText: 'Please provide all values',
     };
   }
 
@@ -78,8 +78,8 @@ const reducer = (state, action) => {
     return {
       ...state,
       showAlert: false,
-      alertType: "",
-      alertText: "",
+      alertType: '',
+      alertText: '',
     };
   }
 
@@ -96,8 +96,8 @@ const reducer = (state, action) => {
       userLocation: action.payload.location,
       jobLocation: action.payload.location,
       showAlert: true,
-      alertType: "success",
-      alertText: "User Created! Redirecting",
+      alertType: 'success',
+      alertText: 'User Created! Redirecting',
     };
   }
 
@@ -106,7 +106,7 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
+      alertType: 'danger',
       alertText: action.payload.msg,
     };
   }
@@ -125,8 +125,8 @@ const reducer = (state, action) => {
       userLocation: action.payload.location,
       jobLocation: action.payload.location,
       showAlert: true,
-      alertType: "success",
-      alertText: "Login Successful! Redirecting",
+      alertType: 'success',
+      alertText: 'Login Successful! Redirecting',
     };
   }
 
@@ -135,7 +135,7 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
+      alertType: 'danger',
       alertText: action.payload.msg,
     };
   }
@@ -153,7 +153,7 @@ const reducer = (state, action) => {
       userLocation: action.payload.location,
       jobLocation: action.payload.location,
       showAlert: true,
-      alertType: "success",
+      alertType: 'success',
       alertText: action.payload.alertText,
     };
   }
@@ -163,7 +163,7 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
+      alertType: 'danger',
       alertText: action.payload.msg,
     };
   }
@@ -183,8 +183,8 @@ const reducer = (state, action) => {
       PasswordRestStatus: true,
       user: null,
       token: null,
-      jobLocation: "",
-      userLocation: "",
+      jobLocation: '',
+      userLocation: '',
     };
   }
 
@@ -203,8 +203,8 @@ const reducer = (state, action) => {
       userLocation: action.payload.location,
       jobLocation: action.payload.location,
       showAlert: true,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -213,7 +213,7 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
+      alertType: 'danger',
       alertText: action.payload.msg,
     };
   }
@@ -229,12 +229,12 @@ const reducer = (state, action) => {
   if (action.type === CLEAR_VALUES) {
     const initialState = {
       isEditing: false,
-      editJobId: "",
-      position: "",
-      company: "",
+      editJobId: '',
+      position: '',
+      company: '',
       jobLocation: state.userLocation,
-      jobType: "full-time",
-      status: "pending",
+      jobType: 'full-time',
+      status: 'pending',
     };
 
     return {
@@ -257,8 +257,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "success",
-      alertText: "Link",
+      alertType: 'success',
+      alertText: 'Link',
     };
   }
 
@@ -267,8 +267,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -283,7 +283,7 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "success",
+      alertType: 'success',
       alertText: action.payload.msg,
     };
   }
@@ -293,8 +293,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -318,8 +318,8 @@ const reducer = (state, action) => {
       isLoading: false,
       methodDeathCount: action.payload.deathCount,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -328,8 +328,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -345,8 +345,8 @@ const reducer = (state, action) => {
       isLoading: false,
       reasonDeathCount: action.payload.deathCount,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -355,8 +355,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -372,8 +372,8 @@ const reducer = (state, action) => {
       isLoading: false,
       occupationDeathCount: action.payload.deathCount,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -382,8 +382,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -399,8 +399,8 @@ const reducer = (state, action) => {
       isLoading: false,
       educationDeathCount: action.payload.deathCount,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -409,8 +409,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -426,8 +426,8 @@ const reducer = (state, action) => {
       isLoading: false,
       methodAllDeathCount: action.payload.deathCount,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -436,8 +436,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -453,8 +453,8 @@ const reducer = (state, action) => {
       isLoading: false,
       reasonAllDeathCount: action.payload.deathCount,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -463,8 +463,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -480,8 +480,8 @@ const reducer = (state, action) => {
       isLoading: false,
       occupationAllDeathCount: action.payload.deathCount,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -490,8 +490,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -507,8 +507,8 @@ const reducer = (state, action) => {
       isLoading: false,
       educationAllDeathCount: action.payload.deathCount,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -517,8 +517,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -533,8 +533,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -543,8 +543,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -562,8 +562,8 @@ const reducer = (state, action) => {
       pdfCount: action.payload.pdfCount,
       pdfsNumOfPages: action.payload.pdfsNumOfPages,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -572,8 +572,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -591,8 +591,8 @@ const reducer = (state, action) => {
       pdfCountEDU: action.payload.pdfCountEDU,
       pdfsNumOfPagesEDU: action.payload.pdfsNumOfPagesEDU,
       showAlert: false,
-      alertType: "success",
-      alertText: "User Profile Updated",
+      alertType: 'success',
+      alertText: 'User Profile Updated',
     };
   }
 
@@ -601,8 +601,8 @@ const reducer = (state, action) => {
       ...state,
       isLoading: false,
       showAlert: true,
-      alertType: "danger",
-      alertText: "Error",
+      alertType: 'danger',
+      alertText: 'Error',
     };
   }
 
@@ -627,9 +627,9 @@ const reducer = (state, action) => {
   if (action.type === CLEAR_VALUES_ADMIN) {
     return {
       ...state,
-      sortMR: "latest",
-      searchTypeMR: "all",
-      searchMR: "all",
+      sortMR: 'latest',
+      searchTypeMR: 'all',
+      searchMR: 'all',
     };
   }
 
@@ -638,9 +638,19 @@ const reducer = (state, action) => {
   if (action.type === CLEAR_VALUES_REASON) {
     return {
       ...state,
-      sortEDU: "latest",
-      searchTypeEDU: "all",
-      searchEDU: "all",
+      sortEDU: 'latest',
+      searchTypeEDU: 'all',
+      searchEDU: 'all',
+    };
+  }
+
+  if (action.type === DELETEPDF_BEGIN) {
+    return {
+      ...state,
+      isLoading: true,
+      showAlert: true,
+      alertType: 'success',
+      alertText: 'pdf delete success',
     };
   }
 

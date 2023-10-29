@@ -627,6 +627,27 @@ const AppProvider = ({ children }) => {
     dispatch({ type: CLEAR_VALUES_REASON });
   };
 
+  //delete pdf
+  const deletePDF = async (id) => {
+    dispatch({ type: DELETEPDF_BEGIN });
+    try {
+      await authFetch.delete(`/history/pdfdelete/${id}`);
+      getPDFHistory();
+    } catch (error) {
+      logoutUser();
+    }
+  };
+
+  const deletePDFEdu = async (id) => {
+    dispatch({ type: DELETEPDF_BEGIN });
+    try {
+      await authFetch.delete(`/history/pdfedudelete/${id}`);
+      getPDFHistoryEDU();
+    } catch (error) {
+      logoutUser();
+    }
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -657,6 +678,8 @@ const AppProvider = ({ children }) => {
         getPDFHistoryEDU,
         changePageEDU,
         clearValuesEDU,
+        deletePDF,
+        deletePDFEdu,
       }}
     >
       {children}

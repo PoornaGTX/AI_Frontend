@@ -1,0 +1,117 @@
+export const DISPLAY_ALERT = "SHOW_ALERT";
+export const CLEAR_ALERT = "CLEAR_ALERT";
+
+//user Register
+export const REGISTER_USER_BEGIN = "REGISTER_USER_BEGIN";
+export const REGISTER_USER_SUCCESS = "REGISTER_USER_SUCCESS";
+export const REGISTER_USER_ERROR = "REGISTER_USER_ERROR";
+
+//user Login
+export const LOGIN_USER_BEGIN = "LOGIN_USER_BEGIN";
+export const LOGIN_USER_SUCCESS = "LOGIN_USER_SUCCESS";
+export const LOGIN_USER_ERROR = "LOGIN_USER_ERROR";
+
+export const SETUP_USER_BEGIN = "LOGIN_USER_BEGIN";
+export const SETUP_USER_SUCCESS = "LOGIN_USER_SUCCESS";
+export const SETUP_USER_ERROR = "LOGIN_USER_ERROR";
+
+//update user
+export const UPDATE_USER_BEGIN = "UPDATE_USER_BEGIN";
+export const UPDATE_USER_SUCCESS = "UPDATE_USER_SUCCESS";
+export const UPDATE_USER_ERROR = "UPDATE_USER_ERROR";
+
+export const HANDLE_CHANGE = "HANDLE_CHANGE";
+
+export const CLEAR_VALUES = "CLEAR_VALUES";
+
+//sidebar
+export const TOGGLE_SIDEBAR = "TOGGLE_SIDEBAR";
+
+//logout
+export const LOGOUT_USER = "LOGOUT_USER";
+
+//login password reset
+export const LOGIN_PASSWORDREST = "LOGIN_PASSWORDREST";
+export const LOGIN_PASSWORDREST_COMPLETE = "LOGIN_PASSWORDREST_COMPLETE";
+export const LOGIN_PASSWORDREST_ERROR = "LOGIN_PASSWORDREST_ERROR";
+
+export const CLEAR_FILTERS_APPLIED_JOBS = "CLEAR_FILTERS_APPLIED_JOBS";
+
+//new password
+export const LOGIN_NEWPASSWORD = "LOGIN_NEWPASSWORD";
+export const LOGIN_NEWPASSWORD_COMPLETE = "LOGIN_NEWPASSWORD_COMPLETE";
+export const LOGIN_NEWPASSWORD_ERROR = "LOGIN_NEWPASSWORD_ERROR";
+
+//set update user
+export const SET_UPDATE_USER = "SET_UPDATE_USER";
+
+//update user admin
+export const UPDATE_USER_ADMIN_BEGIN = "UPDATE_USER_ADMIN_BEGIN";
+export const UPDATE_USER_ADMIN_SUCCESS = "UPDATE_USER_ADMIN_SUCCESS";
+export const UPDATE_USER_ADMIN_ERROR = "UPDATE_USER_ADMIN_ERROR";
+
+///////////////////////////////////////////////////////////////////
+
+//admin clear values
+export const CLEAR_VALUES_ADMIN = "CLEAR_VALUES_ADMIN";
+
+//admin pagination
+export const CHANGE_VLAUES = "CHANGE_VLAUES";
+
+export const CLEAR_VALUES_REASON = "CLEAR_VALUES_REASON";
+
+//method
+export const METHOD_BEGIN = "METHOD_BEGIN";
+export const METHOD_SUCCESS = "METHOD_SUCCESS";
+export const METHOD_ERROR = "METHOD_ERROR";
+
+//method_all
+export const METHOD_ALL_BEGIN = "METHOD_ALL_BEGIN";
+export const METHOD_ALL_SUCCESS = "METHOD_ALL_SUCCESS";
+export const METHOD_ALL_ERROR = "METHOD_ALL_ERROR";
+
+//reason
+export const REASON_BEGIN = "REASON_BEGIN";
+export const REASON_SUCCESS = "REASON_SUCCESS";
+export const REASON_ERROR = "REASON_ERROR";
+
+//reason_all
+export const REASON_ALL_BEGIN = "REASON_ALL_BEGIN";
+export const REASON_ALL_SUCCESS = "REASON_ALL_SUCCESS";
+export const REASON_ALL_ERROR = "REASON_ALL_ERROR";
+
+//occupation
+export const OCCUPATION_BEGIN = "OCCUPATION_BEGIN";
+export const OCCUPATION_SUCCESS = "OCCUPATION_SUCCESS";
+export const OCCUPATION_ERROR = "OCCUPATION_ERROR";
+
+//occupation_all
+export const OCCUPATION_ALL_BEGIN = "OCCUPATION_ALL_BEGIN";
+export const OCCUPATION_ALL_SUCCESS = "OCCUPATION_ALL_SUCCESS";
+export const OCCUPATION_ALL_ERROR = "OCCUPATION_ALL_ERROR";
+
+//education
+export const EDUCATION_BEGIN = "EDUCATION_BEGIN";
+export const EDUCATION_SUCCESS = "EDUCATION_SUCCESS";
+export const EDUCATION_ERROR = "EDUCATION_ERROR";
+
+//education_all
+export const EDUCATION_ALL_BEGIN = "EDUCATION_ALL_BEGIN";
+export const EDUCATION_ALL_SUCCESS = "EDUCATION_ALL_SUCCESS";
+export const EDUCATION_ALL_ERROR = "EDUCATION_ALL_ERROR";
+
+//PDF
+export const GET_ALL_BEGIN = "GET_ALL_BEGIN";
+export const GET_ALL_SUCCESS = "GET_ALL_SUCCESS";
+export const GET_ALL_ERROR = "GET_ALL_ERROR";
+
+export const CREATE_ALL_BEGIN = "CREATE_ALL_BEGIN";
+export const CREATE_ALL_SUCCESS = "CREATE_ALL_SUCCESS";
+export const CREATE_ALL_ERROR = "CREATE_ALL_ERROR";
+
+export const GETEDU_ALL_BEGIN = "GETEDU_ALL_BEGIN";
+export const GETEDU_SUCCESS = "GETEDU_ALL_SUCCESS";
+export const GETEDU_ERROR = "GETEDU_ALL_ERROR";
+
+//EDU pagination
+export const CHANGE_VLAUES_EDU = "CHANGE_VLAUES_EDU";
